@@ -8,16 +8,40 @@
 
 .steps-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 960px;
+  margin-inline: auto;
 }
 
 .step-item {
-  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 220px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 0.75rem;
+}
+
+.step-connector {
+  flex: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.25rem;
+  list-style: none;
+}
+
+.step-connector::before {
+  content: '→';
+  font-size: 1rem;
+  color: var(--text-faint);
+  line-height: 1;
 }
 
 .step-num {
@@ -40,34 +64,25 @@
   line-height: 1.6;
 }
 
-.step-arrow {
-  display: none;
-}
-
-@media (min-width: 769px) {
-  .step-item:not(:last-child)::after {
-    content: '↓';
-    position: absolute;
-    top: 0.25rem;
-    right: -1rem;
-    font-size: 0.875rem;
-    color: var(--text-faint);
-    transform: rotate(-90deg);
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 639px) {
   .steps-list {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    max-width: 24rem;
   }
 
-  .step-item:not(:last-child)::after {
+  .step-item {
+    width: 100%;
+    max-width: none;
+  }
+
+  .step-connector {
+    flex: none;
+    width: 100%;
+    padding: 0.625rem 0;
+  }
+
+  .step-connector::before {
     content: '↓';
-    display: block;
-    text-align: center;
-    color: var(--text-faint);
-    font-size: 1rem;
-    margin-top: 0.5rem;
   }
 }

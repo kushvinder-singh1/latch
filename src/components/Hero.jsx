@@ -30,10 +30,14 @@ export function Hero() {
           </div>
           <p className="hero-note">Currently in private beta. No credit card required.</p>
         </div>
-        <DataFlowArt />
-        <div className="hero-visual">
-          <HeroInspector />
+      </div>
+      <div className="hero-art-band">
+        <div className="hero-art-inner">
+          <DataFlowArt />
         </div>
+      </div>
+      <div className="container hero-visual-wrap">
+        <HeroInspector />
       </div>
     </section>
   );

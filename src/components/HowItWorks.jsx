@@ -12,16 +12,23 @@ export function HowItWorks() {
         </ScrollReveal>
 
         <ol className="steps-list">
-          {STEPS.map((step, index) => (
-            <li key={step.id} className="step-item">
-              <span className="step-num">{step.id}</span>
-              <div className="step-content">
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-desc">{step.description}</p>
-              </div>
-              {index < STEPS.length - 1 && <span className="step-connector" aria-hidden="true" />}
-            </li>
-          ))}
+          {STEPS.flatMap((step, index) => {
+            const items = [
+              <li key={step.id} className="step-item">
+                <span className="step-num">{step.id}</span>
+                <div className="step-content">
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-desc">{step.description}</p>
+                </div>
+              </li>,
+            ];
+            if (index < STEPS.length - 1) {
+              items.push(
+                <li key={`connector-${index}`} className="step-connector" aria-hidden="true" />,
+              );
+            }
+            return items;
+          })}
         </ol>
       </div>
     </section>

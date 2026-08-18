@@ -110,8 +110,22 @@
   margin-bottom: 0.5rem;
 }
 
-.hero-visual {
+.hero-art-band {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-inline: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.hero-art-inner {
+  width: min(
+    calc(100vw - 2.5rem),
+    calc(var(--max-width) + max(0px, (100vw - var(--max-width) - 5rem) * 0.72))
+  );
+}
+
+.hero-visual-wrap {
   margin-top: -0.25rem;
 }
 
