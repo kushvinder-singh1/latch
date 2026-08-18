@@ -47,7 +47,7 @@ export function FinalCTA() {
             </form>
           )}
 
-          <p className="cta-fine">Private beta · No payment required</p>
+          <p className="cta-fine">Product concept · Built for engineering teams</p>
         </ScrollReveal>
       </div>
     </section>

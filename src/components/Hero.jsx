@@ -28,7 +28,7 @@ export function Hero() {
               View product demo
             </a>
           </div>
-          <p className="hero-note">Currently in private beta. No credit card required.</p>
+          <p className="hero-note">Product concept · Built for engineering teams</p>
         </div>
         <DataFlowArt />
         <div className="hero-visual">
