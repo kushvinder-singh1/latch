@@ -4,15 +4,6 @@
 
 .product-header {
   margin-bottom: 2rem;
-  width: 100%;
-}
-
-.product-header .section-title {
-  max-width: 24ch;
-}
-
-.product-header .section-desc {
-  max-width: 52ch;
 }
 
 .product-demo {

@@ -1,6 +1,7 @@
 .data-flow-art {
   position: relative;
   width: 100%;
+  max-width: 1120px;
   height: clamp(72px, 10vw, 100px);
   margin: 0.375rem 0 0.125rem;
   pointer-events: none;
