@@ -1,0 +1,86 @@
+.cta-section {
+  padding: var(--section-gap) 0;
+}
+
+.cta-card {
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 3.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.cta-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 42ch;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+.cta-form {
+  display: flex;
+  gap: 0.625rem;
+  max-width: 420px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.cta-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-input:focus {
+  outline: none;
+  border-color: var(--accent-text);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.cta-input::placeholder {
+  color: var(--text-faint);
+}
+
+.cta-submit {
+  flex-shrink: 0;
+}
+
+.cta-success {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.cta-fine {
+  font-size: 0.8125rem;
+  color: var(--text-faint);
+}
+
+@media (max-width: 480px) {
+  .cta-form {
+    flex-direction: column;
+  }
+
+  .cta-submit {
+    width: 100%;
+  }
+}
